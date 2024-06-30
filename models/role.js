@@ -1,18 +1,18 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = require('../config/config');
+const sequelize = require('../config/connection');
 
 class Role extends Model{}
 
 Role.init(
     {
         id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         }, 
         title: {
-            type: DataType.VARCHAR(30),
+            type: DataTypes.STRING,
             unique: true,
             allowNull: false,
         },
@@ -20,13 +20,21 @@ Role.init(
             type: DataTypes.DECIMAL,
             allowNull: true,
         }, 
-        department: {
+        department_id: {
             type: DataTypes.INTEGER,  
             allowNull: false          
         }
 
 
-    }
+    }, 
+        {
+            sequelize,
+            timestamps: false,
+            freezeTableName: true,
+            underscored: true,
+            modelName: 'role'
+        }
+    
 )
 
 module.exports = Role;

@@ -20,8 +20,20 @@ Employee.init({
     manager_id: {
         type: DataTypes.INTEGER,
         allowNull: true
+    }, 
+    role_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
+}, 
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'employee'
     }
 
-})
+)
 
 module.exports = Employee;

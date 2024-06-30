@@ -12,7 +12,7 @@ Department.init(
             autoIncrement: true,
         }, 
         name: {
-            type: DataType.VARCHAR(30),             
+            type: DataTypes.STRING,             
             allowNull: true,
             unique: true
         }

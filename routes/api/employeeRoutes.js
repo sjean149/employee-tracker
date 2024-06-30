@@ -1,10 +1,10 @@
-const Router = require('express').Router();
+const router = require('express').Router();
 const Employee = require('../../models/employee');
 
 router.get('/', async (req, res)=>{
+    
     try{
-        res.send("Working");
-        const employeeData = await Employee.findall();
+        const employeeData = await Employee.findAll();
         res.status(200).json(employeeData);
 
     } catch (err){
@@ -22,3 +22,5 @@ router.post('/', async (req, res) =>{
 
     }
 })
+console.log('Exporting router:', typeof router); 
+module.exports = router;

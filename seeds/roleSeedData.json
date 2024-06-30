@@ -1,26 +1,22 @@
 [
     {
-        "id": " ",
-        "title": " ",
-        "salary": " ",
-        "department": " "
+        "title": "Software Engineer",
+        "salary": "90",
+        "department": "Sales"
     },
     {
-        "id": " ",
-        "title": " ",
-        "salary": " ",
-        "department": " "
+        "title": "Account Manager",
+        "salary": "50",
+        "department": "FInance"
     },
     {
-        "id": " ",
-        "title": " ",
-        "salary": " ",
-        "department": " "
+        "title": "Legal Team Lead",
+        "salary": "80",
+        "department": "Legal"
     },
     {
-        "id": " ",
-        "title": " ",
-        "salary": " ",
-        "department": " "
+        "title": "Accountant",
+        "salary": "70",
+        "department": "Finance"
     }
 ]

@@ -1,19 +1,15 @@
 [
     {
-        "id": " ",
-        "name": " "
+        "name": "Marketing"
     },
     {
-        "id": " ",
-        "name": " "
+        "name": "Engineering"
     }, 
     {
-        "id": " ",
-        "name": " "
+        "name": "Finance"
     },
     {
-        "id": " ",
-        "name": " "
+        "name": "Legal"
     } 
 
 ]
