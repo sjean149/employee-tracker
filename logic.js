@@ -9,7 +9,7 @@ const questions = [
     type: 'list',
     name: 'original',
     message: 'Choose one of the following options: ',
-    choices: ['view all departments', 'view all roles', 'view all employees', 'add a department', 'add a role', 'add an employee', 'update an employee role', 'delete a department', 'delete an employee', 'exit']
+    choices: ['view all departments', 'view all roles', 'view all employees', 'add a department', 'add a role', 'add an employee', 'update an employee', 'delete a department', 'delete an employee', 'exit']
   }
 ];
 
@@ -110,6 +110,7 @@ const updateEmployee = [
   }
 ]
 
+//Questions for deleting department
 const deleteDepartment = [
   {
     type: 'input',
@@ -118,6 +119,7 @@ const deleteDepartment = [
   }
 ]
 
+//question for deleting employee
 const deleteEmployee = [
   {
     type: 'input',
@@ -126,6 +128,7 @@ const deleteEmployee = [
   }
 ]
 
+//Runs main 
 function mainMenu() {
   inquirer.prompt(questions).then(answer => {
     handleUserInput(answer.original);
@@ -170,7 +173,7 @@ async function handleUserInput(answers) {
       })
       mainMenu();
       break;
-    case 'update an employee role':
+    case 'update an employee':
 
       await inquirer.prompt(updateEmployee).then(answers => {
         let propertyToUpdate = answers.property;
@@ -179,7 +182,7 @@ async function handleUserInput(answers) {
         if (propertyToUpdate === 'first_name') {
           newValue = answers.first_name;
         } else if (propertyToUpdate === 'last_name') {
-          newValue = answers.role_id;
+          newValue = answers.last_name;
         } else if (propertyToUpdate === 'role_id') {
           newValue = answers.role_id;
         } else {

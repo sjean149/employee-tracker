@@ -33,6 +33,10 @@ class Employee extends Model {
         }
     }
 
+    /* updates Employee 'property' with new Value 'updatedProperty
+    ex: if id = 2, and property = 'first_name', and updatedProperty is Sarah, it 
+    will update the second employees first name to Sarah.
+    */
     static async updateEmployee(id, property, updatedProperty){
         try{
            
@@ -48,6 +52,7 @@ class Employee extends Model {
         }
     }
 
+    //deletes employee
     static async deleteEmployee(id){
         try{
             await Employee.destroy({
